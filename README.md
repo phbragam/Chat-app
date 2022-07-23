@@ -2,7 +2,7 @@
 
 ## Description
 
-Chat made in Unity using Photon Chat, authentication made in php server hosted in 000WebHost.
+Chat app made in Unity using Photon, authentication made in php server hosted in 000WebHost.
 
 ### Unity Version
 
