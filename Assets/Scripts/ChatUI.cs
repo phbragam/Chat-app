@@ -28,7 +28,7 @@ public class ChatUI : MonoBehaviour, IChatClientListener
         DontDestroyOnLoad(this.gameObject);
         this.chatAppSettings = PhotonNetwork.PhotonServerSettings.AppSettings;
         bool appIdPresent = !string.IsNullOrEmpty(this.chatAppSettings.AppIdChat);
-        this.connectPanel.gameObject.SetActive(appIdPresent);
+        // this.connectPanel.gameObject.SetActive(appIdPresent);
 
         if (!appIdPresent)
         {

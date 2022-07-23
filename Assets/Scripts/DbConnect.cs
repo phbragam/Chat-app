@@ -10,6 +10,11 @@ public class DbConnect : MonoBehaviour
     public Text userName;
     public Text score;
     public Text password;
+    public Text chatNameText;
+    public Text loginFailedText;
+    public GameObject Connect;
+    public GameObject Login;
+
 
     public void AddDetails()
     {
@@ -71,9 +76,18 @@ public class DbConnect : MonoBehaviour
             Debug.Log(www.text);
             string[] details = www.text.Split('|');
             userName.transform.parent.GetComponent<InputField>().text = details[0];
-            if (details.Length > 2)
+            if (details.Length > 1)
             {
+                Debug.Log("entrou");
                 score.transform.parent.GetComponent<InputField>().text = details[1];
+                chatNameText.text = details[0];
+                loginFailedText.gameObject.SetActive(false);
+                Connect.SetActive(true);
+                Login.SetActive(false);
+            }
+            else
+            {
+                loginFailedText.gameObject.SetActive(true);
             }
         }
     }

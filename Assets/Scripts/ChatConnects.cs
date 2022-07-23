@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class ChatConnects : MonoBehaviour
 {
-    public InputField chatName;
+    // public InputField chatName;
+    public Text chatName;
+    public GameObject Chat;
 
     public void ConnectToChat()
     {
@@ -14,6 +16,7 @@ public class ChatConnects : MonoBehaviour
         if (!string.IsNullOrEmpty(chatui.userName))
         {
             chatui.Connect();
+            Chat.SetActive(true);
             enabled = false;
         }
     }
